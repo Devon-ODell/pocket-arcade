@@ -1,0 +1,85 @@
+{
+  "_comment": "Arcade listing extras by slug: difficulty chip and card color for any game, plus tagline and controls for games whose manifest does not carry them.",
+  "orbit-courier": {
+    "tagline": "Collect the mint parcels, dodge the orange debris, and keep your ship in one piece for 45 seconds.",
+    "controls": "Arrow keys or A/D to change lane, or tap a lane. Enter to launch.",
+    "orientation": "landscape",
+    "difficulty": "Easy",
+    "color": "#9dff3a"
+  },
+  "wisp-warden": {
+    "difficulty": "Normal",
+    "color": "#ff4fd8"
+  },
+  "tic-tac-toe": {
+    "category": "board",
+    "difficulty": "Adjustable AI",
+    "color": "#ffd166"
+  },
+  "four-in-a-row": {
+    "category": "board",
+    "difficulty": "Adjustable AI",
+    "color": "#ffd166"
+  },
+  "shard-stack": {
+    "category": "puzzle",
+    "difficulty": "Arcade",
+    "color": "#b697ff"
+  },
+  "rune-garden": {
+    "category": "puzzle",
+    "difficulty": "Arcade",
+    "color": "#b697ff"
+  },
+  "cinder-hop": {
+    "category": "platformer",
+    "difficulty": "Arcade",
+    "color": "#ffb56b"
+  },
+  "burrow-rally": {
+    "category": "racing",
+    "difficulty": "Arcade",
+    "color": "#6cecca"
+  },
+  "glimmer-glide": {
+    "category": "arcade",
+    "difficulty": "One-button",
+    "color": "#e4c781"
+  },
+  "letter-leap": {
+    "category": "typing",
+    "difficulty": "Type + timing",
+    "color": "#a4d881"
+  },
+  "apex-circuit": {
+    "category": "racing",
+    "orientation": "landscape",
+    "difficulty": "Time trial",
+    "color": "#ff9c64"
+  },
+  "crosstown": {
+    "category": "racing",
+    "difficulty": "Night shift",
+    "color": "#70e0d2"
+  },
+  "chess": {
+    "category": "board",
+    "difficulty": "Adjustable AI",
+    "color": "#d6bc80"
+  },
+  "goblins": {
+    "category": "cards",
+    "difficulty": "Five goblins",
+    "color": "#c5e589"
+  },
+  "paintball-insanity": {
+    "orientation": "landscape",
+    "difficulty": "Four tiers",
+    "color": "#ff3cac"
+  },
+  "cowboys-and-aliens": {
+    "category": "shooter",
+    "difficulty": "Horde rounds",
+    "color": "#e8a33d"
+  }
+}

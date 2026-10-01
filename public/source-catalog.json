@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "source_base": "video-games (parent of openRouter-Studio)",
+  "entries": [
+    {
+      "id": "claude-of-duty",
+      "title": "Claude of Duty",
+      "source": "catalog/claude-of-duty-main",
+      "engine": "Three.js 0.185.1",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "Local arcade: /catalog/claude-of-duty/ (requires internet for import-map modules)",
+      "web_root": "export/web"
+    },
+    {
+      "id": "iw4l",
+      "title": "IW4L",
+      "source": "catalog/iw4L-master",
+      "engine": "Rust / Bevy 0.19 + custom wgpu",
+      "kind": "engine/game",
+      "status": "source available; runtime unverified",
+      "launch": "Set IW4L_GAMES to owned game data; run make map mp_boneyard. No retail data is included."
+    },
+    {
+      "id": "paintball-roblox",
+      "title": "Paintball Insanity (original)",
+      "source": "catalog/paintball",
+      "engine": "Roblox / Luau",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "Open Play.command or use Rojo with Roblox Studio; see BUILD_PLAN.md."
+    },
+    {
+      "id": "icebowl",
+      "title": "Ice Bowl",
+      "source": "catalog/icebowl",
+      "engine": "Roblox / Luau",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "rokit install; rojo serve; connect from Roblox Studio."
+    },
+    {
+      "id": "digital-extinction",
+      "title": "Digital Extinction",
+      "source": "catalog/Game-main",
+      "engine": "Rust / Bevy",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --bin de; follow README system dependencies."
+    },
+    {
+      "id": "bevy-rpg",
+      "title": "3D Bevy RPG template",
+      "source": "catalog/bevy_new_3d_rpg-main",
+      "engine": "Rust / Bevy",
+      "kind": "template",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run; inspect feature and system dependency requirements in README."
+    },
+    {
+      "id": "boing-ggez",
+      "title": "Boing Ggez",
+      "source": "catalog/rust-game-ports-master/boing-ggez",
+      "engine": "Rust / ggez",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "bunner-macroquad",
+      "title": "Bunner Macroquad",
+      "source": "catalog/rust-game-ports-master/bunner-macroquad",
+      "engine": "Rust / macroquad",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "catacomb_2-sdl2",
+      "title": "Catacomb_2 Sdl2",
+      "source": "catalog/rust-game-ports-master/catacomb_2-sdl2",
+      "engine": "Rust / sdl2",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "cavern-macroquad",
+      "title": "Cavern Macroquad",
+      "source": "catalog/rust-game-ports-master/cavern-macroquad",
+      "engine": "Rust / macroquad",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "rusty_roguelike-bevy",
+      "title": "Rusty_Roguelike Bevy",
+      "source": "catalog/rust-game-ports-master/rusty_roguelike-bevy",
+      "engine": "Rust / bevy",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "rusty_roguelike-macroquad",
+      "title": "Rusty_Roguelike Macroquad",
+      "source": "catalog/rust-game-ports-master/rusty_roguelike-macroquad",
+      "engine": "Rust / macroquad",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "soccer-fyrox",
+      "title": "Soccer Fyrox",
+      "source": "catalog/rust-game-ports-master/soccer-fyrox",
+      "engine": "Rust / fyrox",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --release from this source directory; see collection README for platform dependencies."
+    },
+    {
+      "id": "lightyear",
+      "title": "Lightyear",
+      "source": "lightyear-main",
+      "engine": "Rust / Bevy 0.19; Lightyear 0.30.0",
+      "kind": "library",
+      "status": "source available; runtime unverified",
+      "launch": "FPS example: cd examples/fps; cargo run -- host-client -c 0"
+    },
+    {
+      "id": "virtual-joystick",
+      "title": "Virtual Joystick",
+      "source": "virtual_joystick-main",
+      "engine": "Rust / Bevy 0.19; virtual_joystick 2.8.0",
+      "kind": "library",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run --example multiple --features inspect"
+    },
+    {
+      "id": "skate3clone",
+      "title": "Skate 3 Clone",
+      "source": "catalog/skate3clone-main",
+      "engine": "Rust / Bevy 0.19 (custom)",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "See SKETCH.md/research/ for design; build.rs and docs/ describe the source-built macOS/Windows client paths.",
+      "note": "Third-party clone project; catalogued for reference, not licensed for asset reuse."
+    },
+    {
+      "id": "rust-rewrite-mashup",
+      "title": "2010 Rust Rewrite Mashup",
+      "source": "catalog/2010-rust-rewrite-mashup-main",
+      "engine": "Rust / Bevy 0.19 + IW4L (MW2 + Skate 3 + Minecraft)",
+      "kind": "game",
+      "status": "source available; runtime unverified",
+      "launch": "cargo run via Makefile; needs owned MW2/Skate3 data (IW4L_GAMES).",
+      "note": "IW4L fork adding Skate 3 mode and a Minecraft world map; third-party project, own license terms."
+    }
+  ]
+}

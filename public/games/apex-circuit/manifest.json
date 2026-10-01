@@ -1,0 +1,42 @@
+{
+  "slug": "apex-circuit",
+  "title": "Apex Circuit",
+  "version": "0.2.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "Three-lap circuit time trial with rear-drive handling. Racing targets replace the unrelated star-catching template metrics; runs end after a finish or the ten-minute session limit.",
+  "tagline": "One car. One circuit. Three laps on the limit.",
+  "controls": "Up / W accelerates · Down / S brakes · Left / Right steers · Touch steering and pedals",
+  "sim": {
+    "runs": 20,
+    "seed": 1,
+    "max_ticks": 36000
+  },
+  "targets": {
+    "completion_rate": [
+      1,
+      1
+    ],
+    "mean_finished": [
+      0.75,
+      1
+    ],
+    "p50_laps": [
+      3,
+      3
+    ],
+    "p50_seconds": [
+      315,
+      335
+    ],
+    "mean_offtrack_share": [
+      0,
+      0.4
+    ],
+    "mean_spins": [
+      0,
+      40
+    ]
+  }
+}

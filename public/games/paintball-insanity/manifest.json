@@ -1,0 +1,58 @@
+{
+  "slug": "paintball-insanity",
+  "title": "Paintball Insanity",
+  "version": "0.2.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "First-person speedball. Clear five Gauntlet rounds of four, six, eight, ten and twelve opponents, each against a 200-second clock, with real paintball drop and spread. Payouts in Field Fees buy two more markers and unlock three harder tiers. Everything is paint: players are hit and out for the round, never harmed.",
+  "tagline": "Five rounds. The field fills up.",
+  "controls": "WASD to move, mouse to aim (click to lock), click to fire. Shift sprints, C crouches (sprint + C slides), Q/E lean, R reloads, F shoves. On touch: left thumb moves, drag to aim, FIRE / R / DUCK buttons.",
+  "sim": {
+    "runs": 40,
+    "seed": 1,
+    "max_ticks": 70000
+  },
+  "targets": {
+    "completion_rate": [
+      1,
+      1
+    ],
+    "mean_won": [
+      0.9,
+      1
+    ],
+    "mean_rounds_cleared": [
+      4.8,
+      5
+    ],
+    "mean_deaths": [
+      18,
+      29
+    ],
+    "mean_accuracy": [
+      0.075,
+      0.11
+    ],
+    "mean_longest_streak": [
+      6.5,
+      11
+    ],
+    "mean_score": [
+      115,
+      160
+    ],
+    "p10_seconds": [
+      290,
+      355
+    ],
+    "p50_seconds": [
+      355,
+      430
+    ],
+    "p90_seconds": [
+      410,
+      495
+    ]
+  }
+}

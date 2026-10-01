@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pocket Arcade</title>
+  <meta name="theme-color" content="#07060f">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="arcade.css">
+</head>
+<body data-page="play" class="play-page">
+  <div class="sky" aria-hidden="true"></div>
+  <div class="page">
+    <div class="main">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Back to all games"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Pocket Arcade</span></a>
+        <span class="game-title" id="game-title"></span>
+        <span class="spacer"></span>
+        <button class="btn" type="button" id="pause" hidden>Pause</button>
+        <button class="btn" type="button" id="restart" hidden>Restart</button>
+        <button class="btn" type="button" data-open-bugs aria-controls="bugs" aria-expanded="false">Report</button>
+      </header>
+      <p id="load-error" class="status err" hidden></p>
+      <div class="stage">
+        <iframe id="frame" allow="autoplay; fullscreen" referrerpolicy="same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="backdrop" data-close-bugs></div>
+    <aside class="bugs" id="bugs" role="dialog" aria-modal="true" aria-labelledby="bugs-title" hidden>
+      <button class="btn bugs-close" type="button" data-close-bugs aria-label="Close the bug report panel">Close</button>
+      <h2 id="bugs-title">Report a bug</h2>
+      <p class="intro muted">Opening this form pauses the game, so what you report is exactly what's on screen.</p>
+      <form id="bug-form" novalidate>
+        <label class="field">Which game?
+          <select name="game"></select>
+        </label>
+        <label class="field">What went wrong?
+          <input name="summary" maxlength="200" autocomplete="off" placeholder="e.g. I got hit but lost no light">
+        </label>
+        <label class="field">What were you doing? (optional)
+          <textarea name="details" maxlength="4000" placeholder="Steps, what you expected, what happened instead"></textarea>
+        </label>
+        <fieldset class="severity">
+          <legend>How bad is it?</legend>
+          <label><input type="radio" name="severity" value="blocker"><span>Can't play</span></label>
+          <label><input type="radio" name="severity" value="annoying" checked><span>Annoying</span></label>
+          <label><input type="radio" name="severity" value="cosmetic"><span>Looks off</span></label>
+        </fieldset>
+        <label class="attach" id="attach-row" hidden><input type="checkbox" name="attach" checked>
+          <span>Attach the game's exact state (seed, score and a snapshot) so the bug can be replayed</span></label>
+        <button class="btn btn-primary" type="submit">Send report</button>
+        <p class="status" id="bug-status" aria-live="polite"></p>
+      </form>
+      <h3 id="recent-title" hidden>Recent reports</h3>
+      <ol class="recent" id="recent"></ol>
+    </aside>
+  </div>
+  <script src="arcade.js"></script>
+</body>
+</html>

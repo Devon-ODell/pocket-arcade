@@ -1,0 +1,46 @@
+{
+  "slug": "wisp-warden",
+  "title": "Wisp Warden",
+  "version": "0.2.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "A pocket roguelite: hold back waves of shadow motes with a light that fires on its own, and draft one boon of three after every wave. Targets: a bad run still reaches a draft, the median run fits a bus ride, great runs go twice as deep, and drafts vary.",
+  "tagline": "Hold back the dark, then draft a boon after every wave.",
+  "controls": "Arrows / WASD, or the touch joystick, to move; your light fires by itself. Tap a card (or arrows + Space) to draft.",
+  "sim": {
+    "runs": 30,
+    "seed": 1,
+    "max_ticks": 54000
+  },
+  "targets": {
+    "completion_rate": [
+      0.95,
+      1.0
+    ],
+    "p10_waves": [
+      2,
+      10
+    ],
+    "p50_waves": [
+      3,
+      10
+    ],
+    "p90_waves": [
+      5,
+      20
+    ],
+    "p10_seconds": [
+      45,
+      240
+    ],
+    "p50_seconds": [
+      90,
+      300
+    ],
+    "mean_boons": [
+      2.5,
+      8
+    ]
+  }
+}

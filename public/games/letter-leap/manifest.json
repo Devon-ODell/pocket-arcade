@@ -1,0 +1,38 @@
+{
+  "slug": "letter-leap",
+  "title": "Letter Leap",
+  "version": "0.1.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "A typing-powered crossing adventure. Spell a destination, wait for a gap, and hop across traffic and drifting logs to deliver the post.",
+  "tagline": "Type a path. Watch the traffic. Deliver the post.",
+  "controls": "Type the word on a tile · Space / Enter to hop · Backspace edits · Touch letter keys work too",
+  "sim": {
+    "runs": 20,
+    "seed": 1,
+    "max_ticks": 8000
+  },
+  "targets": {
+    "completion_rate": [
+      1,
+      1
+    ],
+    "p50_seconds": [
+      20,
+      120
+    ],
+    "mean_rows": [
+      10,
+      28
+    ],
+    "mean_won": [
+      0.15,
+      0.95
+    ],
+    "mean_accuracy": [
+      0.85,
+      1
+    ]
+  }
+}

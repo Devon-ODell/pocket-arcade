@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pocket Arcade · quick games, free to play</title>
+  <meta name="description" content="Short, original browser games. No installs, no sign-up. Play on your phone or computer.">
+  <meta name="theme-color" content="#07060f">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="arcade.css">
+</head>
+<body data-page="home">
+  <div class="sky" aria-hidden="true">
+    <span class="shape sq" style="left: 8%; top: 22%;"></span>
+    <span class="shape tri" style="left: 44%; top: 12%; animation-delay: -2s;"></span>
+    <span class="shape sq" style="left: 62%; top: 58%; animation-delay: -4s;"></span>
+    <span class="shape tri" style="left: 18%; top: 66%; animation-delay: -1s;"></span>
+  </div>
+  <div class="page">
+    <div class="main">
+      <header class="topbar">
+        <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Pocket Arcade</span></a>
+        <span class="spacer"></span>
+        <a class="btn" href="catalog.html">Source catalog</a>
+        <button class="btn" type="button" data-open-bugs aria-controls="bugs" aria-expanded="false">Report a bug</button>
+      </header>
+
+      <main class="home">
+        <section class="hero">
+          <p class="hero-kicker">ONE MORE TRY. ONE NEW HIGH SCORE.</p>
+          <h1>Pick a game.<br><span class="hot">Beat your best.</span></h1>
+          <p>Quick original games that run right in your browser. No installs, no sign-up, and they play just as well on a phone as with a keyboard.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary quick-play" id="quick-play" type="button" disabled><span aria-hidden="true">▶</span> Quick play</button>
+            <a class="btn" href="#games">Choose your game ↓</a>
+            <span id="game-count" class="game-count" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <div class="ad ad-leaderboard" data-ad-slot="home-leaderboard" data-ad-size="728x90,320x100">
+          <span class="ad-label">Ad</span>
+        </div>
+
+        <h2 class="section-title">Pick a game</h2>
+        <p id="load-error" class="status err" hidden></p>
+        <div class="grid" id="games"></div>
+        <section class="next-up" aria-labelledby="next-up-title">
+          <h2 class="section-title" id="next-up-title">Next up in the arcade</h2>
+          <p>New worlds, bigger challenges. These games are in development.</p>
+          <div class="coming-grid">
+            <article data-upcoming="shard-stack"><span class="genre-icon" aria-hidden="true">▟</span><h3>Shard Stack</h3><p>Falling-block puzzles<br>Five depths. Five guardians.</p><span class="coming-label">IN DEVELOPMENT</span></article>
+            <article data-upcoming="rune-garden"><span class="genre-icon" aria-hidden="true">✿</span><h3>Rune Garden</h3><p>Match-three adventures<br>Four worlds. Twenty levels.</p><span class="coming-label">IN DEVELOPMENT</span></article>
+            <article data-upcoming="cinder-hop"><span class="genre-icon" aria-hidden="true">↟</span><h3>Cinder Hop</h3><p>Run, jump, explore<br>Hidden paths. Four bosses.</p><span class="coming-label">IN DEVELOPMENT</span></article>
+            <article data-upcoming="burrow-rally"><span class="genre-icon" aria-hidden="true">⚑</span><h3>Burrow Rally</h3><p>Kart racing<br>Three cups. Twelve tracks.</p><span class="coming-label">IN DEVELOPMENT</span></article>
+          </div>
+        </section>
+        <div class="ad ad-rectangle" id="rectangle-slot" data-ad-slot="home-rectangle" data-ad-size="300x250">
+          <span class="ad-label">Ad</span>
+        </div>
+      </main>
+    </div>
+
+    <div class="backdrop" data-close-bugs></div>
+    <aside class="bugs" id="bugs" role="dialog" aria-modal="true" aria-labelledby="bugs-title" hidden>
+      <button class="btn bugs-close" type="button" data-close-bugs aria-label="Close the bug report panel">Close</button>
+      <h2 id="bugs-title">Report a bug</h2>
+      <p class="intro muted">Something broken, confusing or slow? Tell us here and it goes straight to the studio's bug list.</p>
+      <form id="bug-form" novalidate>
+        <label class="field">Which game?
+          <select name="game"></select>
+        </label>
+        <label class="field">What went wrong?
+          <input name="summary" maxlength="200" autocomplete="off" placeholder="e.g. the start button does nothing">
+        </label>
+        <label class="field">What were you doing? (optional)
+          <textarea name="details" maxlength="4000" placeholder="Steps, what you expected, what happened instead"></textarea>
+        </label>
+        <fieldset class="severity">
+          <legend>How bad is it?</legend>
+          <label><input type="radio" name="severity" value="blocker"><span>Can't play</span></label>
+          <label><input type="radio" name="severity" value="annoying" checked><span>Annoying</span></label>
+          <label><input type="radio" name="severity" value="cosmetic"><span>Looks off</span></label>
+        </fieldset>
+        <label class="attach" id="attach-row" hidden><input type="checkbox" name="attach" checked>
+          <span>Attach the game's exact state (seed, score and a snapshot) so the bug can be replayed</span></label>
+        <button class="btn btn-primary" type="submit">Send report</button>
+        <p class="status" id="bug-status" aria-live="polite"></p>
+      </form>
+      <h3 id="recent-title" hidden>Recent reports</h3>
+      <ol class="recent" id="recent"></ol>
+    </aside>
+  </div>
+  <script src="arcade.js"></script>
+</body>
+</html>

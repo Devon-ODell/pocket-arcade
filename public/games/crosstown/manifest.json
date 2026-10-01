@@ -1,0 +1,42 @@
+{
+  "slug": "crosstown",
+  "title": "Crosstown",
+  "version": "0.1.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "An original night-shift delivery sandbox. Explore a seeded street grid, dodge traffic, collect parcels and break patrol line of sight. A shift lasts three minutes.",
+  "tagline": "A city after dark. A job worth the detour.",
+  "controls": "WASD / arrows drive · Space drifts · Touch steering and pedals",
+  "sim": {
+    "runs": 20,
+    "seed": 1,
+    "max_ticks": 11000
+  },
+  "targets": {
+    "completion_rate": [
+      1,
+      1
+    ],
+    "p50_seconds": [
+      180,
+      181
+    ],
+    "mean_jobs_done": [
+      1,
+      10
+    ],
+    "mean_distance": [
+      5000,
+      30000
+    ],
+    "mean_pedestrians_clipped": [
+      0,
+      3
+    ],
+    "mean_crashes": [
+      0,
+      10
+    ]
+  }
+}

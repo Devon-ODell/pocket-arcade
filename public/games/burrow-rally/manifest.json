@@ -1,0 +1,26 @@
+{
+  "slug": "burrow-rally",
+  "title": "Burrow Rally",
+  "version": "0.1.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "Drift critter karts through a three-track cup. Build boost and chase a podium finish.",
+  "tagline": "Drift critter karts through a three-track cup. Build boost and chase a podium finish.",
+  "controls": "Arrows or A/D steer · Hold Space while turning to drift · Down brakes",
+  "sim": {
+    "runs": 20,
+    "seed": 1,
+    "max_ticks": 40000
+  },
+  "targets": {
+    "completion_rate": [
+      1,
+      1
+    ],
+    "mean_score": [
+      1,
+      100000
+    ]
+  }
+}

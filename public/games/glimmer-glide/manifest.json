@@ -1,0 +1,30 @@
+{
+  "slug": "glimmer-glide",
+  "title": "Glimmer Glide",
+  "version": "0.1.1",
+  "platform": "html5",
+  "entry": "index.html",
+  "logic": "game.js",
+  "description": "Guide a lantern moth through moonlit crystal arches. Tap to rise, release to fall, and collect golden glimmers in each gap.",
+  "tagline": "Tiny wings. Moonlit gaps. One more flight.",
+  "controls": "Tap, Space or Up to flap · P / Escape pauses",
+  "sim": {
+    "runs": 20,
+    "seed": 1,
+    "max_ticks": 36000
+  },
+  "targets": {
+    "completion_rate": [
+      1,
+      1
+    ],
+    "p50_seconds": [
+      15,
+      180
+    ],
+    "mean_gates": [
+      5,
+      80
+    ]
+  }
+}
