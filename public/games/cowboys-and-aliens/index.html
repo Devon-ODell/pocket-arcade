@@ -3,16 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Cowboys &amp; Aliens</title>
+  <title>Cowboys &amp; Aliens — Bevy Rewrite</title>
   <style>
-    html, body { margin: 0; height: 100%; background: #05070f; overflow: hidden; }
-    body { display: flex; align-items: center; justify-content: center; }
-    canvas { display: block; image-rendering: auto; }
+    html, body { margin: 0; width: 100%; height: 100%; background: #05070f; overflow: hidden; }
+    body { display: grid; place-items: center; color: #f4dfb4; font: 600 14px ui-monospace, monospace; }
+    canvas { display: block; width: 100% !important; height: 100% !important; outline: none; }
+    #loading { position: fixed; inset: 0; z-index: 2; display: grid; place-content: center; gap: 12px; text-align: center; background: radial-gradient(circle, #28150d, #05070f 68%); }
+    #loading strong { color: #ffbd4a; font-size: clamp(22px, 5vw, 52px); letter-spacing: .08em; }
+    #loading span { max-width: 34rem; opacity: .78; }
+    #loading.error strong { color: #ff6b63; }
   </style>
 </head>
 <body>
-  <canvas id="game" width="480" height="720"></canvas>
-  <script src="game.js"></script>
-  <script src="shell.js"></script>
+  <div id="loading"><strong>IRON VEIN</strong><span>Loading the Rust + Bevy rewrite. The first visit downloads the engine and may take a moment.</span></div>
+  <script type="application/x-studio-headless" src="game.js"></script>
+  <script type="application/x-studio-headless" src="shell.js"></script>
+  <script type="module">
+    import init from '../../bevy/cowboys-and-aliens/frontier_fps.js';
+
+    const loading = document.querySelector('#loading');
+    let paused = false;
+    const escape = () => {
+      window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', bubbles: true }));
+      window.dispatchEvent(new KeyboardEvent('keyup', { key: 'Escape', code: 'Escape', bubbles: true }));
+    };
+    window.studio = {
+      getState: () => ({ paused, seed: 0, tick: 0, over: false, metrics: {} }),
+      pause: () => { if (!paused) { escape(); paused = true; } },
+      resume: () => { if (paused) { escape(); paused = false; } },
+      reset: () => location.reload(),
+      snapshot: () => JSON.stringify({ runtime: 'bevy-wasm', map: 'iron-vein' })
+    };
+
+    try {
+      await init();
+      loading.remove();
+    } catch (error) {
+      console.error(error);
+      loading.classList.add('error');
+      loading.querySelector('strong').textContent = 'LOAD FAILED';
+      loading.querySelector('span').textContent = `${error.message || error}. WebGL2 and WebAssembly are required.`;
+    }
+  </script>
 </body>
 </html>

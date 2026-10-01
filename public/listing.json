@@ -78,6 +78,7 @@
     "color": "#ff3cac"
   },
   "cowboys-and-aliens": {
+    "orientation": "landscape",
     "category": "shooter",
     "difficulty": "Horde rounds",
     "color": "#e8a33d"

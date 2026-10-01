@@ -1,13 +1,13 @@
 {
   "slug": "cowboys-and-aliens",
   "title": "Cowboys & Aliens",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "platform": "html5",
   "entry": "index.html",
   "logic": "game.js",
-  "description": "First-person retro horde shooter on a frontier town. Hold the street against rounds of zombie-cowboys, screamer aliens, a six-shot sheriff boss every fifth round and aura-casting queens from round seven. Kills pay points that buy wall weapons, open the laundromat and bowling alley doors, and random drops can flip a round.",
-  "tagline": "Hold the town. Six shots at a time.",
-  "controls": "WASD to move, mouse to aim (click to lock), click to fire. Shift sprints, R reloads, F melee, E buys wall weapons and opens doors, 1-5 switches weapons. On touch: left thumb moves, drag to aim, tap to fire, walk onto drops to take them.",
+  "description": "The Rust and Bevy rewrite of Cowboys & Aliens. Survive Iron Vein, an original compact frontier horde map built around a central plaza, two-story bank and hotel landmarks, laundry and ten-pin routes, and the connected Double Tap Alley. Repair iron window grilles, earn points, and buy from a ten-weapon frontier arsenal.",
+  "tagline": "The Rust + Bevy rewrite. Survive Iron Vein.",
+  "controls": "WASD moves · Mouse aims · Click fires and captures the cursor · Shift sprints · Space jumps · R reloads · E repairs iron grilles · F buys weapons or ammunition · Escape releases the cursor",
   "sim": {
     "runs": 40,
     "seed": 1,
